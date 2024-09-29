@@ -9,10 +9,10 @@ The starter file is `model_starter.py`, and it utilizes the model available at: 
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
-2. [Usage](#usage)
+2. [Usage](#example-requests)
 3. [Dockerization](#dockerization)
 4. [Kubernetes Deployment](#kubernetes-deployment)
-
+4. [Continuous integration](#github-actions)
 ## Getting Started
 
 ### Prerequisites
@@ -22,7 +22,6 @@ The starter file is `model_starter.py`, and it utilizes the model available at: 
 - Kubernetes (Rancher Desktop for local deployment)
 
 ### Install Dependencies
-Install Dependencies
 ```
 pip install -r requirements.txt
 ```
@@ -34,6 +33,7 @@ uvicorn main:app --port=8000
 ```
 
 This command will launch the application on localhost:8000. To interact with the API, navigate to http://localhost:8000/docs
+
 
 ### Example Requests
 
@@ -84,7 +84,7 @@ Download and install [Rancher Desktop](https://rancherdesktop.io/).
 
 Rancher Desktop will set up `k3s`, a lightweight Kubernetes distribution.
 
-### Deploying the Application
+#### Deploying the Application
 
 1.**Deploy the pod**
 ```
