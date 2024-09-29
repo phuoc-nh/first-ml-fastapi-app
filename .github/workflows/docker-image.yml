@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build -t thecoffeeguy/mlfastapiapp:latest .
+    - name: Push the Docker image
+      run: |
+        docker login -u thecoffeeguy -p ${{ secrets.DOCKER_HUB_TOKEN }}
+        docker push thecoffeeguy/mlfastapiapp:latest
