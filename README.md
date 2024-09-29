@@ -96,3 +96,10 @@ kubectl port-forward pods/first-fastapi 8000:8000
 ```
 
 
+### Github actions
+This step is to automatically push image to Docker hub when changes are merge into main.
+
+- Go to [Docker hub](https://app.docker.com/settings/personal-access-tokens) to generate a token.
+- Go to project setting click `Secrets and variables` to add docker token.
+- In docker-image.yml, use the token to login to Docker hub and push the image.
+
